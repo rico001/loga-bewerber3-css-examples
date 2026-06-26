@@ -472,12 +472,14 @@ body,
 /* ---------- File Upload Controller ---------- */
 .LG-FileController,
 .LG-FileController-Edit,
+.LG-FileController-Edit-uploader,
 .LG-FileController-MainPanel {
   background: rgba(255, 255, 255, 0.07) !important;
   background-color: rgba(255, 255, 255, 0.07) !important;
 }
 
-.LG-FileController-Edit {
+.LG-FileController-Edit,
+.LG-FileController-Edit-uploader {
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
   border-radius: 7px !important;
   padding: 4px 8px !important;
@@ -487,9 +489,17 @@ body,
   height: auto !important;
 }
 
-.LG-FileController-Edit:hover {
+.LG-FileController-Edit:hover,
+.LG-FileController-Edit-uploader:hover {
   background: rgba(255, 255, 255, 0.11) !important;
   border-color: rgba(100, 180, 255, 0.5) !important;
+}
+
+/* Kill das background-class highlight vom Icon */
+.LG-FileController .background,
+.LG-FileController-MainPanel .background {
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
 .LG-FileController-Icon {
