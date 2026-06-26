@@ -381,9 +381,8 @@ body,
 }
 
 /* ---------- Kill weiße Backgrounds im Formular ---------- */
-.BW-WebPositionPage .LG-Form *,
-.BW-WebPositionPage .LG-BoxPanel *,
-.BW-WebPositionPage .LG-BoxPanelRow *,
+.BW-WebPositionPage .LG-Form *:not(.LG-FileController):not(.LG-FileController-Edit):not(.LG-FileController-MainPanel),
+.BW-WebPositionPage .LG-BoxPanel *:not(.LG-FileController):not(.LG-FileController-Edit):not(.LG-FileController-MainPanel),
 .BW-WebPositionPage table,
 .BW-WebPositionPage td,
 .BW-WebPositionPage tr {
@@ -466,13 +465,21 @@ body,
 }
 
 /* ---------- File Upload Controller ---------- */
+.LG-FileController,
+.LG-FileController-Edit,
+.LG-FileController-MainPanel {
+  background: rgba(255, 255, 255, 0.07) !important;
+  background-color: rgba(255, 255, 255, 0.07) !important;
+}
+
 .LG-FileController-Edit {
-  background: rgba(255, 255, 255, 0.06) !important;
   border: 1px dashed rgba(100, 180, 255, 0.35) !important;
   border-radius: 7px !important;
-  padding: 8px 10px !important;
+  padding: 4px 8px !important;
   cursor: pointer !important;
   transition: background 0.2s ease, border-color 0.2s ease !important;
+  min-height: unset !important;
+  height: auto !important;
 }
 
 .LG-FileController-Edit:hover {
