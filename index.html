@@ -4,18 +4,95 @@
   <meta charset="UTF-8">
   <title>Bewerber3 CSS Examples</title>
   <style>
-    body { font-family: sans-serif; padding: 2rem; background: #f5f5f5; }
-    h1 { font-size: 1.2rem; color: #333; margin-bottom: 1rem; }
-    ul { list-style: none; padding: 0; }
-    li { margin-bottom: 0.5rem; }
+    body { font-family: sans-serif; padding: 2rem; background: #f5f5f5; color: #333; }
+    h1 { font-size: 1.2rem; margin-bottom: 1rem; }
+    ul { list-style: none; padding: 0; max-width: 760px; }
+    li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 0.5rem;
+      background: #fff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 10px 12px;
+    }
     a { color: #0969da; text-decoration: none; font-size: 14px; }
     a:hover { text-decoration: underline; }
+    .url { flex: 1; font-size: 13px; color: #57606a; font-family: monospace; word-break: break-all; }
+    button {
+      border: 1px solid #d0d7de;
+      background: #f6f8fa;
+      border-radius: 6px;
+      padding: 5px 12px;
+      font-size: 13px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.15s ease;
+    }
+    button:hover { background: #eaeef2; }
+    button.copied { background: #1f883d; color: #fff; border-color: #1f883d; }
   </style>
 </head>
 <body>
   <h1>CSS Examples</h1>
-  <ul>
-    <li><a href="bewerber-portal-morphism.css">bewerber-portal-morphism.css</a></li>
-  </ul>
+  <ul id="list"></ul>
+
+  <script>
+    const files = [
+      "bewerber-portal-morphism.css",
+      "bewerber-portal-corporate.css",
+      "bewerber-portal-brutalism.css",
+      "bewerber-portal-material.css"
+    ];
+
+    // Basis-URL = Ordner dieser Seite (funktioniert auf GitHub Pages, lokal, etc.)
+    const base = location.href.replace(/index\.html?$/, "").replace(/\/?$/, "/");
+    const list = document.getElementById("list");
+
+    files.forEach(name => {
+      const fullUrl = base + name;
+      const li = document.createElement("li");
+
+      const link = document.createElement("a");
+      link.href = name;
+      link.textContent = name;
+
+      const url = document.createElement("span");
+      url.className = "url";
+      url.textContent = fullUrl;
+
+      const btn = document.createElement("button");
+      btn.textContent = "Link kopieren";
+      btn.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(fullUrl);
+          btn.textContent = "Kopiert!";
+          btn.classList.add("copied");
+          setTimeout(() => {
+            btn.textContent = "Link kopieren";
+            btn.classList.remove("copied");
+          }, 1500);
+        } catch (e) {
+          // Fallback für ältere Browser
+          const ta = document.createElement("textarea");
+          ta.value = fullUrl;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand("copy");
+          document.body.removeChild(ta);
+          btn.textContent = "Kopiert!";
+          btn.classList.add("copied");
+          setTimeout(() => {
+            btn.textContent = "Link kopieren";
+            btn.classList.remove("copied");
+          }, 1500);
+        }
+      });
+
+      li.append(link, url, btn);
+      list.appendChild(li);
+    });
+  </script>
 </body>
 </html>
