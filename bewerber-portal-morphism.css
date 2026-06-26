@@ -5,7 +5,8 @@
 
 /* ---------- Page background ---------- */
 body,
-.BW-MainPanel {
+.BW-MainPanel,
+.BW-webPositionDeteilScreen {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%) !important;
   min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -30,7 +31,7 @@ body,
   background-size: contain;
   background-position: center left;
   margin-right: auto;
-  /* filter: invert(1) brightness(2); */
+  filter: invert(1) brightness(2);
 }
 
 /* ---------- Header bar ---------- */
@@ -370,10 +371,12 @@ body,
 }
 
 /* ---------- Kill weiße Backgrounds im Formular ---------- */
-.BW-WebPositionPage *,
-.LG-Form *,
-.LG-BoxPanel *,
-.LG-BoxPanelRow * {
+.BW-WebPositionPage .LG-Form *,
+.BW-WebPositionPage .LG-BoxPanel *,
+.BW-WebPositionPage .LG-BoxPanelRow *,
+.BW-WebPositionPage table,
+.BW-WebPositionPage td,
+.BW-WebPositionPage tr {
   background-color: transparent !important;
 }
 
