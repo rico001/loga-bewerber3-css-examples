@@ -10,7 +10,8 @@ html {
 
 body,
 .BW-MainPanel,
-.BW-webPositionDeteilScreen {
+.BW-webPositionDeteilScreen,
+.LG-ScrollPanel {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%) !important;
   min-height: 100vh !important;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
@@ -21,6 +22,12 @@ body,
 .BW-MainPanel {
   max-width: 100% !important;
   width: 100% !important;
+}
+
+/* Scroll-Content transparent, damit ScrollPanel-Verlauf durchscheint */
+.LG-ScrollPanel-Content {
+  background: transparent !important;
+  min-width: 100% !important;
 }
 
 /* ---------- Main container ---------- */
@@ -67,15 +74,61 @@ body,
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
   border-radius: 8px !important;
   color: #c8d8f0 !important;
-  padding: 6px 14px !important;
+  padding: 0 !important;
   font-size: 13px;
   transition: background 0.2s ease, border-color 0.2s ease;
   cursor: pointer;
+  height: auto !important;
+  min-height: unset !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.BW-Header .LG-Button .html-face {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  padding: 7px 14px !important;
+  line-height: 1 !important;
+}
+
+.BW-Header .LG-Button .html-face span {
+  display: inline-flex !important;
+  align-items: center !important;
+  vertical-align: middle !important;
+  line-height: 1 !important;
 }
 
 .BW-Header .LG-Button:hover {
   background: rgba(255, 255, 255, 0.16) !important;
   border-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+/* Sprach-Combobox (secondary button) hat inline grauen bg */
+.BW-Header .LG-MultiControl .LG-Button.secondary {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Such-Icon-Button im Header */
+.BW-Header .LG-IconButton[data-uin="ic-search"] {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 8px !important;
+  color: #c8d8f0 !important;
+  width: 38px !important;
+  height: 34px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  transition: background 0.2s ease, border-color 0.2s ease !important;
+}
+
+.BW-Header .LG-IconButton[data-uin="ic-search"]:hover {
+  background: rgba(255, 255, 255, 0.16) !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  color: #78b8ff !important;
 }
 
 /* ---------- Main table / section ---------- */
@@ -207,13 +260,6 @@ body,
   text-align: center;
   width: 36px !important;
   padding: 2px 6px !important;
-}
-
-/* ---------- Scroll panel ---------- */
-.LG-ScrollPanel,
-.LG-ScrollPanel-Content {
-  background: transparent !important;
-  min-width: 100% !important;
 }
 
 /* ---------- Section content padding ---------- */
