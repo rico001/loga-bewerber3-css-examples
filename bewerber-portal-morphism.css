@@ -48,6 +48,7 @@ body,
   background-size: contain;
   background-position: center left;
   margin-right: auto;
+  filter: invert(1) brightness(2);
 }
 
 /* ---------- Header bar ---------- */
@@ -487,6 +488,12 @@ body,
   font-weight: 500 !important;
 }
 
+/* ---------- Vertikaler Abstand zwischen Formularzeilen ---------- */
+.BW-WebPositionPage .LG-Form td {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
 .LG-InputLabel-required {
   color: #a0c4e8 !important;
 }
@@ -559,31 +566,56 @@ body,
 .LG-FileController,
 .LG-FileController-Edit,
 .LG-FileController-Edit-uploader,
-.LG-FileController-MainPanel {
-  background: rgba(255, 255, 255, 0.07) !important;
-  background-color: rgba(255, 255, 255, 0.07) !important;
+.LG-FileController-MainPanel,
+.LG-FileController-Text,
+.LG-FileController .LG-Icon,
+.LG-FileController-Edit input {
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
 .LG-FileController-Edit,
 .LG-FileController-Edit-uploader {
+  background: rgba(255, 255, 255, 0.07) !important;
+  background-color: rgba(255, 255, 255, 0.07) !important;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
   border-radius: 7px !important;
-  padding: 4px 8px !important;
+  padding: 0 8px !important;
   cursor: pointer !important;
   transition: background 0.2s ease, border-color 0.2s ease !important;
-  min-height: unset !important;
+  height: 30px !important;
+  min-height: 30px !important;
+  max-height: 30px !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+.LG-FileController-MainPanel {
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.LG-FileController-MainPanel .LG-Icon,
+.LG-FileController-Icon {
   height: auto !important;
+  line-height: 1 !important;
+  margin-left: auto !important;
 }
 
 .LG-FileController-Edit:hover,
 .LG-FileController-Edit-uploader:hover {
   background: rgba(255, 255, 255, 0.11) !important;
+  background-color: rgba(255, 255, 255, 0.11) !important;
   border-color: rgba(100, 180, 255, 0.5) !important;
 }
 
 /* Kill das background-class highlight vom Icon */
 .LG-FileController .background,
-.LG-FileController-MainPanel .background {
+.LG-FileController-MainPanel .background,
+.LG-FileController .bg-transparent {
   background: transparent !important;
   background-color: transparent !important;
 }
