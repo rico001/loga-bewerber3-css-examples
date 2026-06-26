@@ -48,7 +48,6 @@ body,
   background-size: contain;
   background-position: center left;
   margin-right: auto;
-  filter: invert(1) brightness(2);
 }
 
 /* ---------- Header bar ---------- */
@@ -89,15 +88,29 @@ body,
   align-items: center !important;
   justify-content: center !important;
   gap: 6px !important;
-  padding: 7px 14px !important;
-  line-height: 1 !important;
+  padding: 0 14px !important;
+  height: 34px !important;
+  line-height: 34px !important;
 }
 
 .BW-Header .LG-Button .html-face span {
   display: inline-flex !important;
   align-items: center !important;
+  height: 34px !important;
+  line-height: 34px !important;
   vertical-align: middle !important;
-  line-height: 1 !important;
+}
+
+/* leere GWT-Spans ohne Inhalt ausblenden */
+.BW-Header .LG-Button .html-face span:empty {
+  display: none !important;
+}
+
+/* Icon im Button auf gleiche Höhe bringen */
+.BW-Header .LG-Button .html-face .LG-Icon {
+  line-height: 34px !important;
+  height: 34px !important;
+  font-size: 16px !important;
 }
 
 .BW-Header .LG-Button:hover {
