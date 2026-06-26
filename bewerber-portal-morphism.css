@@ -2,7 +2,7 @@
    Bewerber Portal — Glassmorphism Theme
    Targets the LG/GWT component classes in the positions view
    ============================================================ */
- 
+
 /* ---------- Page background ---------- */
 body,
 .BW-MainPanel {
@@ -11,14 +11,14 @@ body,
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: #e0e6f0;
 }
- 
+
 /* ---------- Main container ---------- */
 .BW-PositionsScreen {
   padding: 32px 24px;
   max-width: 1200px;
   margin: 0 auto;
 }
- 
+
 /* ---------- Logo ---------- */
 .BW-Header::before {
   content: "";
@@ -32,7 +32,7 @@ body,
   margin-right: auto;
   filter: invert(1) brightness(2);
 }
- 
+
 /* ---------- Header bar ---------- */
 .BW-Header {
   display: flex;
@@ -47,7 +47,7 @@ body,
   border-radius: 14px;
   margin-bottom: 24px;
 }
- 
+
 /* ---------- Language/login buttons ---------- */
 .BW-Header .LG-Button {
   background: rgba(255, 255, 255, 0.08) !important;
@@ -61,12 +61,12 @@ body,
   transition: background 0.2s ease, border-color 0.2s ease;
   cursor: pointer;
 }
- 
+
 .BW-Header .LG-Button:hover {
   background: rgba(255, 255, 255, 0.16) !important;
   border-color: rgba(255, 255, 255, 0.35) !important;
 }
- 
+
 /* ---------- Main table / section ---------- */
 .LG-Section,
 .LG-MaskDataTable {
@@ -80,7 +80,7 @@ body,
     0 8px 32px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
- 
+
 /* ---------- Section header ---------- */
 .LG-Section-Header,
 .LGSection-header {
@@ -88,7 +88,7 @@ body,
   border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
   padding: 14px 18px !important;
 }
- 
+
 .LG-Section-Header-Text {
   color: #a0b8d8;
   font-size: 13px;
@@ -96,7 +96,7 @@ body,
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
- 
+
 /* ---------- Icons in header ---------- */
 .LG-MaskDataTable-Header-Icons .LG-Icon {
   color: rgba(180, 210, 255, 0.7) !important;
@@ -105,11 +105,11 @@ body,
   cursor: pointer;
   transition: color 0.15s ease;
 }
- 
+
 .LG-MaskDataTable-Header-Icons .LG-Icon:hover {
   color: #90c4ff !important;
 }
- 
+
 /* ---------- Table column headers ---------- */
 .LG-DataTableHeader {
   background: rgba(5, 15, 40, 0.5) !important;
@@ -122,32 +122,32 @@ body,
   padding: 12px 16px !important;
   white-space: nowrap;
 }
- 
+
 .LG-DataTableHeader:hover {
   background: rgba(255, 255, 255, 0.08) !important;
   color: #b8d4f0 !important;
 }
- 
+
 /* ---------- Table rows ---------- */
 .LG-DataTableEvenRow,
 .LG-DataTableOddRow {
   transition: background 0.15s ease;
 }
- 
+
 .LG-DataTableEvenRow {
   background: rgba(10, 25, 60, 0.4) !important;
 }
- 
+
 .LG-DataTableOddRow {
   background: rgba(20, 40, 80, 0.5) !important;
 }
- 
+
 .LG-DataTableEvenRow:hover,
 .LG-DataTableOddRow:hover {
   background: rgba(120, 180, 255, 0.12) !important;
   cursor: pointer;
 }
- 
+
 /* ---------- Table cells ---------- */
 .LG-DataTableCell {
   color: #ddeeff !important;
@@ -156,38 +156,38 @@ body,
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
   vertical-align: middle !important;
 }
- 
+
 .LG-DataTableFirstColumn .LG-DataTableCell,
 .LG-DataTableFirstColumn {
   font-weight: 500 !important;
   color: #ffffff !important;
 }
- 
+
 /* ---------- Eye icon (detail button) ---------- */
 .Bewerber-Table-Multiwidget .LG-Icon {
   color: rgba(120, 180, 255, 0.6) !important;
   font-size: 20px !important;
   transition: color 0.2s ease, transform 0.15s ease;
 }
- 
+
 .Bewerber-Table-Multiwidget .LG-Icon:hover {
   color: #78b8ff !important;
   transform: scale(1.2);
 }
- 
+
 /* ---------- Table footer / pager ---------- */
 .LG-DataTable-Footer {
   background: rgba(5, 15, 40, 0.5) !important;
   border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
   padding: 10px 18px !important;
 }
- 
+
 .gwt-DataPager,
 .gwt-DataPager .gwt-InlineLabel {
   color: #7a9abb !important;
   font-size: 13px !important;
 }
- 
+
 .LG-NumberBox {
   background: rgba(255, 255, 255, 0.1) !important;
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
@@ -197,17 +197,17 @@ body,
   width: 36px !important;
   padding: 2px 6px !important;
 }
- 
+
 /* ---------- Scroll panel ---------- */
 .LG-ScrollPanel {
   background: transparent !important;
 }
- 
+
 /* ---------- Section content padding ---------- */
 .LG-Section-Content {
   padding: 0 !important;
 }
- 
+
 /* ---------- Kill all white backgrounds inside the table ---------- */
 .LG-Section *,
 .LG-MaskDataTable *,
@@ -216,34 +216,34 @@ body,
 .BW-PositionsScreen .LG-DataTableWidget > div > div {
   background-color: transparent !important;
 }
- 
+
 /* ---------- Re-apply intentional row colors after the reset ---------- */
 .LG-DataTableEvenRow {
   background-color: rgba(10, 25, 60, 0.4) !important;
 }
- 
+
 .LG-DataTableOddRow {
   background-color: rgba(20, 40, 80, 0.5) !important;
 }
- 
+
 .LG-DataTableEvenRow:hover,
 .LG-DataTableOddRow:hover {
   background-color: rgba(120, 180, 255, 0.12) !important;
 }
- 
+
 .LG-DataTableHeader {
   background-color: rgba(5, 15, 40, 0.5) !important;
 }
- 
+
 .LG-DataTable-Footer {
   background-color: rgba(5, 15, 40, 0.5) !important;
 }
- 
+
 .LG-Section-Header,
 .LGSection-header {
   background-color: rgba(5, 15, 40, 0.5) !important;
 }
- 
+
 /* ---------- Search box (if visible) ---------- */
 .LG-SearchBox {
   background: rgba(255, 255, 255, 0.08) !important;
@@ -255,14 +255,14 @@ body,
   width: 100%;
   box-sizing: border-box;
 }
- 
+
 .LG-SearchBox:focus {
   outline: none !important;
   border-color: rgba(100, 180, 255, 0.5) !important;
   background: rgba(255, 255, 255, 0.12) !important;
   box-shadow: 0 0 0 3px rgba(100, 180, 255, 0.15) !important;
 }
- 
+
 /* ---------- "Keine Position" text block ---------- */
 .Bewerber-Web-Common-Heading,
 #LGLabel18 {
@@ -272,13 +272,13 @@ body,
   margin-top: 28px !important;
   margin-bottom: 8px !important;
 }
- 
+
 .Bewerber-Web-Common-Info,
 .Bewerber-Web-Common-Info .LG-Label {
   color: #8aafc8 !important;
   font-size: 14px !important;
 }
- 
+
 .Bewerber-Web-Common-Info .LG-Anchor {
   color: #78b8ff !important;
   text-decoration: underline;
@@ -286,19 +286,19 @@ body,
   cursor: pointer;
   transition: color 0.15s ease;
 }
- 
+
 .Bewerber-Web-Common-Info .LG-Anchor:hover {
   color: #acd4ff !important;
 }
- 
+
 /* ---------- Collapsible table scroll area ---------- */
 .LG-CollapsibleScrollDataTable-MainTable {
   background: transparent !important;
   width: 100% !important;
 }
- 
+
 /* Scrollbar: kein stabiler Selektor verfügbar (innerer Scroll-Container ist GWT-obfuskiert) */
- 
+
 /* ---------- Selected row state ---------- */
 .LG-DataTableEvenRow.LGElement-keyboard-focus:focus,
 .LG-DataTableOddRow.LGElement-keyboard-focus:focus {
@@ -306,9 +306,218 @@ body,
   background: rgba(100, 170, 255, 0.18) !important;
   box-shadow: inset 0 0 0 2px rgba(100, 170, 255, 0.4) !important;
 }
- 
+
 /* ---------- Accessibility outline (keep visible but styled) ---------- */
 .border-accessibility:focus-visible {
   outline: 2px solid rgba(100, 180, 255, 0.6) !important;
   outline-offset: 2px !important;
+}
+
+
+/* =====================================================
+   #-------------------formular-----------------------
+   Bewerbungsformular — Detail & Formularseite
+   ===================================================== */
+
+/* ---------- Detailseite Wrapper ---------- */
+.BW-webPositionDeteilScreen {
+  padding: 24px !important;
+}
+
+/* ---------- Action Buttons (Herunterladen / Weiterleiten) ---------- */
+.BW-WebPositionActionButtons {
+  margin-bottom: 20px !important;
+}
+
+.BW-WebPositionActionButtons .LG-Button {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 8px !important;
+  color: #c8d8f0 !important;
+  padding: 8px 18px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  transition: background 0.2s ease, border-color 0.2s ease !important;
+  cursor: pointer !important;
+}
+
+.BW-WebPositionActionButtons .LG-Button:hover {
+  background: rgba(255, 255, 255, 0.16) !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+/* ---------- Social Media Bereich ---------- */
+.BW-WebPositionSocialMediaSection {
+  margin-bottom: 16px !important;
+}
+
+.bw-social-media-label {
+  color: #8aafc8 !important;
+  font-size: 13px !important;
+  margin-right: 8px !important;
+}
+
+/* ---------- Formular Container ---------- */
+.BW-WebPositionPage {
+  background: rgba(10, 20, 50, 0.6) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 16px !important;
+  padding: 28px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
+              inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ---------- Kill weiße Backgrounds im Formular ---------- */
+.BW-WebPositionPage *,
+.LG-Form *,
+.LG-BoxPanel *,
+.LG-BoxPanelRow * {
+  background-color: transparent !important;
+}
+
+/* ---------- Form Labels ---------- */
+.LG-InputLabel {
+  color: #8aafc8 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+
+.LG-InputLabel-required {
+  color: #a0c4e8 !important;
+}
+
+.requiredSuffix {
+  color: #ff7eb3 !important;
+  margin-left: 2px !important;
+}
+
+/* ---------- Text Inputs ---------- */
+.LG-TextBox,
+.gwt-combo-box-input,
+.gwt-DateBox {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 7px !important;
+  color: #ddeeff !important;
+  padding: 7px 10px !important;
+  font-size: 14px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  transition: border-color 0.2s ease, background 0.2s ease !important;
+}
+
+.LG-TextBox:focus,
+.gwt-combo-box-input:focus,
+.gwt-DateBox:focus {
+  outline: none !important;
+  border-color: rgba(100, 180, 255, 0.5) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 0 0 3px rgba(100, 180, 255, 0.12) !important;
+}
+
+.LG-TextBox::placeholder,
+.gwt-combo-box-input::placeholder,
+.gwt-DateBox::placeholder {
+  color: rgba(160, 200, 240, 0.35) !important;
+}
+
+/* ---------- Textarea ---------- */
+.LG-TextArea {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 7px !important;
+  color: #ddeeff !important;
+  padding: 8px 10px !important;
+  font-size: 14px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  resize: vertical !important;
+  transition: border-color 0.2s ease !important;
+}
+
+.LG-TextArea:focus {
+  outline: none !important;
+  border-color: rgba(100, 180, 255, 0.5) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 0 0 3px rgba(100, 180, 255, 0.12) !important;
+}
+
+/* ---------- Combo Box Dropdown Arrow ---------- */
+.combo-box-action-icon {
+  color: #78b8ff !important;
+  padding: 0 6px !important;
+}
+
+/* ---------- File Upload Controller ---------- */
+.LG-FileController-Edit {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px dashed rgba(100, 180, 255, 0.35) !important;
+  border-radius: 7px !important;
+  padding: 8px 10px !important;
+  cursor: pointer !important;
+  transition: background 0.2s ease, border-color 0.2s ease !important;
+}
+
+.LG-FileController-Edit:hover {
+  background: rgba(100, 180, 255, 0.1) !important;
+  border-color: rgba(100, 180, 255, 0.6) !important;
+}
+
+.LG-FileController-Icon {
+  color: #78b8ff !important;
+}
+
+.LG-FileController-Text {
+  color: #8aafc8 !important;
+  font-size: 13px !important;
+}
+
+/* ---------- Submit Button (primary) ---------- */
+.LG-Button.primary {
+  background: rgba(60, 120, 220, 0.7) !important;
+  border: 1px solid rgba(100, 180, 255, 0.5) !important;
+  border-radius: 8px !important;
+  color: #ffffff !important;
+  padding: 10px 28px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: background 0.2s ease, box-shadow 0.2s ease !important;
+  margin-top: 16px !important;
+}
+
+.LG-Button.primary:hover {
+  background: rgba(80, 150, 255, 0.8) !important;
+  box-shadow: 0 4px 16px rgba(80, 150, 255, 0.35) !important;
+}
+
+/* ---------- Validation Errors ---------- */
+.ValidationErrorsPanel {
+  background: rgba(180, 40, 60, 0.2) !important;
+  border: 1px solid rgba(255, 100, 120, 0.35) !important;
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+  margin-top: 16px !important;
+}
+
+.ValidationErrorsPanelHeadingText {
+  color: #ffaabb !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  margin-bottom: 6px !important;
+}
+
+.ValidationErrorsPanel ul {
+  color: #ffccd5 !important;
+  font-size: 13px !important;
+  padding-left: 18px !important;
+}
+
+/* ---------- Status Label (orange Prüfung) ---------- */
+.LG-TraficLightLabel-orange {
+  color: #ffcc66 !important;
+  font-size: 13px !important;
+  margin-left: 12px !important;
 }
