@@ -1,0 +1,666 @@
+/* ============================================================
+   Bewerber Portal — Corporate Clean Theme
+   Helles Theme mit Comramo-Cyan als Akzent
+   Targets die LG/GWT Komponenten-Klassen
+   ============================================================ */
+
+/* ---------- Farb-Variablen (zur Anpassung) ----------
+   Akzent:        #00bcd4 (Comramo Cyan)
+   Akzent dunkel: #0097a7
+   Text:          #1a2332
+   Text muted:    #5a6b80
+   Border:        #e1e6ed
+   Hintergrund:   #f4f6f9
+   Karte:         #ffffff
+   --------------------------------------------------- */
+
+/* ---------- Page background ---------- */
+html {
+  background: #f4f6f9 !important;
+}
+
+body,
+.BW-MainPanel,
+.BW-webPositionDeteilScreen,
+.LG-ScrollPanel {
+  background: #f4f6f9 !important;
+  min-height: 100vh !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  color: #1a2332 !important;
+}
+
+.BW-MainPanel {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.LG-ScrollPanel-Content {
+  background: transparent !important;
+  min-width: 100% !important;
+}
+
+.BW-PositionsScreen {
+  padding: 32px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ---------- Logo ---------- */
+.BW-Header::before {
+  content: "";
+  display: inline-block;
+  width: 120px;
+  height: 32px;
+  background-image: url("https://gitlab-swe.comramo.net/reisenberg/bewerber3-css-examples/-/raw/develop/logo-comramo-c-black.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center left;
+  margin-right: auto;
+}
+
+/* ---------- Header bar ---------- */
+.BW-Header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px 20px;
+  background: #ffffff !important;
+  border: 1px solid #e1e6ed;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(26, 35, 50, 0.06);
+  margin-bottom: 24px;
+}
+
+/* ---------- Header buttons ---------- */
+.BW-Header .LG-Button {
+  background: #ffffff !important;
+  border: 1px solid #e1e6ed !important;
+  border-radius: 6px !important;
+  color: #1a2332 !important;
+  padding: 0 !important;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.15s ease, border-color 0.15s ease;
+  cursor: pointer;
+  height: auto !important;
+  min-height: unset !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.BW-Header .LG-Button .html-face {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  padding: 0 14px !important;
+  height: 34px !important;
+  line-height: 34px !important;
+}
+
+.BW-Header .LG-Button .html-face span {
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 34px !important;
+  line-height: 34px !important;
+}
+
+.BW-Header .LG-Button .html-face span:empty {
+  display: none !important;
+}
+
+.BW-Header .LG-Button .html-face .LG-Icon {
+  line-height: 34px !important;
+  height: 34px !important;
+  font-size: 16px !important;
+  color: #5a6b80 !important;
+}
+
+.BW-Header .LG-Button:hover {
+  background: #f4f6f9 !important;
+  border-color: #00bcd4 !important;
+}
+
+.BW-Header .LG-MultiControl .LG-Button.secondary {
+  background-color: #ffffff !important;
+}
+
+.BW-Header .LG-IconButton[data-uin="ic-search"] {
+  background: #ffffff !important;
+  border: 1px solid #e1e6ed !important;
+  border-radius: 6px !important;
+  color: #5a6b80 !important;
+  width: 38px !important;
+  height: 34px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  transition: background 0.15s ease, border-color 0.15s ease !important;
+}
+
+.BW-Header .LG-IconButton[data-uin="ic-search"]:hover {
+  background: #f4f6f9 !important;
+  border-color: #00bcd4 !important;
+  color: #0097a7 !important;
+}
+
+/* ---------- Main table / section ---------- */
+.LG-Section,
+.LG-MaskDataTable {
+  background: #ffffff !important;
+  border: 1px solid #e1e6ed !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(26, 35, 50, 0.06);
+}
+
+/* ---------- Section header ---------- */
+.LG-Section-Header,
+.LGSection-header {
+  background: #fafbfc !important;
+  border-bottom: 1px solid #e1e6ed !important;
+  padding: 14px 18px !important;
+}
+
+.LG-Section-Header-Text {
+  color: #5a6b80;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.LG-MaskDataTable-Header-Icons .LG-Icon {
+  color: #5a6b80 !important;
+  font-size: 18px;
+  margin-right: 4px;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.LG-MaskDataTable-Header-Icons .LG-Icon:hover {
+  color: #00bcd4 !important;
+}
+
+/* ---------- Table column headers ---------- */
+.LG-DataTableHeader {
+  background: #fafbfc !important;
+  color: #5a6b80 !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  border-bottom: 2px solid #e1e6ed !important;
+  padding: 12px 16px !important;
+  white-space: nowrap;
+}
+
+.LG-DataTableHeader:hover {
+  background: #f0f3f6 !important;
+  color: #1a2332 !important;
+}
+
+/* ---------- Table rows ---------- */
+.LG-DataTableEvenRow,
+.LG-DataTableOddRow {
+  transition: background 0.12s ease;
+}
+
+.LG-DataTableEvenRow {
+  background: #ffffff !important;
+}
+
+.LG-DataTableOddRow {
+  background: #fafbfc !important;
+}
+
+.LG-DataTableEvenRow:hover,
+.LG-DataTableOddRow:hover {
+  background: #e6f7fa !important;
+  cursor: pointer;
+}
+
+/* ---------- Table cells ---------- */
+.LG-DataTableCell {
+  color: #1a2332 !important;
+  font-size: 14px !important;
+  padding: 14px 16px !important;
+  border-bottom: 1px solid #eef1f5 !important;
+  vertical-align: middle !important;
+}
+
+.LG-DataTableFirstColumn .LG-DataTableCell,
+.LG-DataTableFirstColumn {
+  font-weight: 600 !important;
+  color: #0f1824 !important;
+}
+
+/* ---------- Eye icon ---------- */
+.Bewerber-Table-Multiwidget .LG-Icon {
+  color: #00bcd4 !important;
+  font-size: 20px !important;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.Bewerber-Table-Multiwidget .LG-Icon:hover {
+  color: #0097a7 !important;
+  transform: scale(1.2);
+}
+
+/* ---------- Footer / pager ---------- */
+.LG-DataTable-Footer {
+  background: #fafbfc !important;
+  border-top: 1px solid #e1e6ed !important;
+  padding: 10px 18px !important;
+}
+
+.gwt-DataPager,
+.gwt-DataPager .gwt-InlineLabel {
+  color: #5a6b80 !important;
+  font-size: 13px !important;
+}
+
+.LG-NumberBox {
+  background: #ffffff !important;
+  border: 1px solid #e1e6ed !important;
+  border-radius: 5px !important;
+  color: #1a2332 !important;
+  text-align: center;
+  width: 36px !important;
+  padding: 2px 6px !important;
+}
+
+.LG-Section-Content {
+  padding: 0 !important;
+}
+
+/* ---------- Kill white bg reset for table ---------- */
+.LG-Section *,
+.LG-MaskDataTable *,
+.BW-PositionsScreen .LG-DataTableWidget,
+.BW-PositionsScreen .LG-DataTableWidget > div,
+.BW-PositionsScreen .LG-DataTableWidget > div > div {
+  background-color: transparent !important;
+}
+
+.LG-DataTableEvenRow { background-color: #ffffff !important; }
+.LG-DataTableOddRow { background-color: #fafbfc !important; }
+.LG-DataTableEvenRow:hover,
+.LG-DataTableOddRow:hover { background-color: #e6f7fa !important; }
+.LG-DataTableHeader { background-color: #fafbfc !important; }
+.LG-DataTable-Footer { background-color: #fafbfc !important; }
+.LG-Section-Header,
+.LGSection-header { background-color: #fafbfc !important; }
+
+/* ---------- Search box ---------- */
+.LG-SearchBox {
+  background: #ffffff !important;
+  border: 1px solid #e1e6ed !important;
+  border-radius: 6px !important;
+  color: #1a2332 !important;
+  padding: 8px 12px !important;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.LG-SearchBox:focus {
+  outline: none !important;
+  border-color: #00bcd4 !important;
+  box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.15) !important;
+}
+
+/* ---------- "Keine Position" Block ---------- */
+.Bewerber-Web-Common-Heading,
+#LGLabel18 {
+  color: #0f1824 !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  margin-top: 28px !important;
+  margin-bottom: 8px !important;
+}
+
+.Bewerber-Web-Common-Info,
+.Bewerber-Web-Common-Info .LG-Label {
+  color: #5a6b80 !important;
+  font-size: 14px !important;
+}
+
+.Bewerber-Web-Common-Info .LG-Anchor {
+  color: #0097a7 !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.Bewerber-Web-Common-Info .LG-Anchor:hover {
+  color: #00bcd4 !important;
+}
+
+.LG-CollapsibleScrollDataTable-MainTable {
+  background: transparent !important;
+  width: 100% !important;
+}
+
+.LG-DataTableEvenRow.LGElement-keyboard-focus:focus,
+.LG-DataTableOddRow.LGElement-keyboard-focus:focus {
+  outline: none !important;
+  background: #d4f1f6 !important;
+  box-shadow: inset 0 0 0 2px #00bcd4 !important;
+}
+
+.border-accessibility:focus-visible {
+  outline: 2px solid #00bcd4 !important;
+  outline-offset: 2px !important;
+}
+
+
+/* =====================================================
+   #-------------------formular-----------------------
+   ===================================================== */
+
+.BW-webPositionDeteilScreen {
+  padding: 24px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* ---------- Back Button ---------- */
+.LG-IconButton[data-uin="ic-arrowleft"] {
+  position: fixed !important;
+  bottom: 24px !important;
+  left: 24px !important;
+  background: #ffffff !important;
+  border: 1px solid #e1e6ed !important;
+  border-radius: 8px !important;
+  color: #5a6b80 !important;
+  width: 44px !important;
+  height: 44px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 100 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 2px 8px rgba(26, 35, 50, 0.12) !important;
+  transition: background 0.15s ease, border-color 0.15s ease !important;
+}
+
+.LG-IconButton[data-uin="ic-arrowleft"]:hover {
+  background: #f4f6f9 !important;
+  border-color: #00bcd4 !important;
+  color: #0097a7 !important;
+}
+
+/* ---------- Action Buttons ---------- */
+.BW-WebPositionActionButtons {
+  margin-bottom: 20px !important;
+}
+
+.BW-WebPositionActionButtons .LG-Button {
+  background: #ffffff !important;
+  border: 1px solid #e1e6ed !important;
+  border-radius: 6px !important;
+  color: #1a2332 !important;
+  padding: 0 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  transition: background 0.15s ease, border-color 0.15s ease !important;
+  cursor: pointer !important;
+  height: auto !important;
+  min-height: unset !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.BW-WebPositionActionButtons .LG-Button .html-face {
+  display: flex !important;
+  align-items: center !important;
+  padding: 9px 18px !important;
+}
+
+.BW-WebPositionActionButtons .LG-Button:hover {
+  background: #f4f6f9 !important;
+  border-color: #00bcd4 !important;
+}
+
+/* ---------- Social Media ---------- */
+.BW-WebPositionSocialMediaSection {
+  margin-bottom: 16px !important;
+}
+
+.bw-social-media-label {
+  color: #5a6b80 !important;
+  font-size: 13px !important;
+  margin-right: 8px !important;
+}
+
+/* ---------- Formular Container ---------- */
+.BW-WebPositionPage {
+  background: #ffffff !important;
+  border: 1px solid #e1e6ed !important;
+  border-radius: 12px !important;
+  padding: 28px !important;
+  box-shadow: 0 1px 3px rgba(26, 35, 50, 0.06) !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+}
+
+.BW-WebPositionPage .LG-Form *:not(.LG-FileController):not(.LG-FileController-Edit):not(.LG-FileController-MainPanel),
+.BW-WebPositionPage .LG-BoxPanel *:not(.LG-FileController):not(.LG-FileController-Edit):not(.LG-FileController-MainPanel),
+.BW-WebPositionPage table,
+.BW-WebPositionPage td,
+.BW-WebPositionPage tr {
+  background-color: transparent !important;
+}
+
+/* ---------- Form Labels ---------- */
+.LG-InputLabel {
+  color: #5a6b80 !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+.BW-WebPositionPage .LG-Form td {
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+}
+
+.LG-InputLabel-required {
+  color: #1a2332 !important;
+}
+
+.requiredSuffix {
+  color: #e53e6c !important;
+  margin-left: 2px !important;
+}
+
+/* ---------- Text Inputs ---------- */
+.LG-TextBox,
+.gwt-combo-box-input,
+.gwt-DateBox {
+  background: #ffffff !important;
+  border: 1px solid #d4dae3 !important;
+  border-radius: 6px !important;
+  color: #1a2332 !important;
+  padding: 4px 10px !important;
+  font-size: 14px !important;
+  box-sizing: border-box !important;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease !important;
+  height: auto !important;
+  min-height: unset !important;
+  line-height: normal !important;
+}
+
+.LG-TextBox:focus,
+.gwt-combo-box-input:focus,
+.gwt-DateBox:focus {
+  outline: none !important;
+  border-color: #00bcd4 !important;
+  box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.12) !important;
+}
+
+.LG-TextBox::placeholder,
+.gwt-combo-box-input::placeholder,
+.gwt-DateBox::placeholder {
+  color: #a0acba !important;
+}
+
+/* ---------- Textarea ---------- */
+.LG-TextArea {
+  background: #ffffff !important;
+  border: 1px solid #d4dae3 !important;
+  border-radius: 6px !important;
+  color: #1a2332 !important;
+  padding: 8px 10px !important;
+  font-size: 14px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  resize: vertical !important;
+  transition: border-color 0.15s ease !important;
+}
+
+.LG-TextArea:focus {
+  outline: none !important;
+  border-color: #00bcd4 !important;
+  box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.12) !important;
+}
+
+.combo-box-action-icon {
+  color: #5a6b80 !important;
+  padding: 0 6px !important;
+}
+
+/* ---------- File Upload ---------- */
+.LG-FileController {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.LG-FileController-MainPanel,
+.LG-FileController-Text,
+.LG-FileController .LG-Icon,
+.LG-FileController-Edit input {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.LG-FileController-Edit,
+.LG-FileController-Edit-uploader {
+  background: #f4f6f9 !important;
+  background-color: #f4f6f9 !important;
+  border: 1px dashed #b8c2cf !important;
+  border-radius: 6px !important;
+  padding: 0 10px !important;
+  cursor: pointer !important;
+  transition: background 0.15s ease, border-color 0.15s ease !important;
+  height: 32px !important;
+  min-height: 32px !important;
+  max-height: 32px !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+.LG-FileController-MainPanel {
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.LG-FileController-MainPanel .LG-Icon,
+.LG-FileController-Icon {
+  height: auto !important;
+  line-height: 1 !important;
+  margin-left: auto !important;
+  color: #00bcd4 !important;
+}
+
+.LG-FileController-Edit:hover,
+.LG-FileController-Edit-uploader:hover {
+  background: #e6f7fa !important;
+  background-color: #e6f7fa !important;
+  border-color: #00bcd4 !important;
+}
+
+.LG-FileController .background,
+.LG-FileController-MainPanel .background,
+.LG-FileController .bg-transparent {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.LG-FileController-Text {
+  color: #5a6b80 !important;
+  font-size: 13px !important;
+}
+
+/* ---------- Submit Button ---------- */
+.LG-Button.primary {
+  background: #00bcd4 !important;
+  border: 1px solid #00bcd4 !important;
+  border-radius: 6px !important;
+  color: #ffffff !important;
+  padding: 0 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: background 0.15s ease, box-shadow 0.15s ease !important;
+  margin-top: 16px !important;
+  height: auto !important;
+  min-height: unset !important;
+  line-height: normal !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.LG-Button.primary:hover {
+  background: #0097a7 !important;
+  border-color: #0097a7 !important;
+  box-shadow: 0 4px 12px rgba(0, 188, 212, 0.3) !important;
+}
+
+.LG-Button.primary .html-face {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 10px 28px !important;
+}
+
+/* ---------- Validation Errors ---------- */
+.ValidationErrorsPanel {
+  background: #fdeaef !important;
+  border: 1px solid #f5b8c8 !important;
+  border-radius: 6px !important;
+  padding: 12px 16px !important;
+  margin-top: 16px !important;
+}
+
+.ValidationErrorsPanelHeadingText {
+  color: #c2295a !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  margin-bottom: 6px !important;
+}
+
+.ValidationErrorsPanel ul {
+  color: #b8285a !important;
+  font-size: 13px !important;
+  padding-left: 18px !important;
+}
+
+.LG-TraficLightLabel-orange {
+  color: #d98a00 !important;
+  font-size: 13px !important;
+  margin-left: 12px !important;
+}
