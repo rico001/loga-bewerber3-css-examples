@@ -478,7 +478,7 @@ body,
 }
 
 .LG-FileController-Edit {
-  border: 1px dashed rgba(100, 180, 255, 0.35) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
   border-radius: 7px !important;
   padding: 4px 8px !important;
   cursor: pointer !important;
@@ -488,8 +488,8 @@ body,
 }
 
 .LG-FileController-Edit:hover {
-  background: rgba(100, 180, 255, 0.1) !important;
-  border-color: rgba(100, 180, 255, 0.6) !important;
+  background: rgba(255, 255, 255, 0.11) !important;
+  border-color: rgba(100, 180, 255, 0.5) !important;
 }
 
 .LG-FileController-Icon {
