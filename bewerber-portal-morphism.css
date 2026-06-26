@@ -48,7 +48,6 @@ body,
   background-size: contain;
   background-position: center left;
   margin-right: auto;
-  filter: invert(1) brightness(2);
 }
 
 /* ---------- Header bar ---------- */
