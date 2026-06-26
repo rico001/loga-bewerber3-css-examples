@@ -14,15 +14,14 @@ body,
 .LG-ScrollPanel-Content {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%) !important;
   min-height: 100vh !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  color: #e0e6f0 !important;
 }
 
 /* MainPanel volle Breite (überschreibt inline max-width: 1500px) */
 .BW-MainPanel {
   max-width: 100% !important;
-}
-  min-height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #e0e6f0;
+  width: 100% !important;
 }
 
 /* ---------- Main container ---------- */
