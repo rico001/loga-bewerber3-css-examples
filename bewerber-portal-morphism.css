@@ -335,11 +335,21 @@ body,
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
   border-radius: 8px !important;
   color: #c8d8f0 !important;
-  padding: 8px 18px !important;
+  padding: 0 18px !important;
   font-size: 13px !important;
   font-weight: 500 !important;
   transition: background 0.2s ease, border-color 0.2s ease !important;
   cursor: pointer !important;
+  height: auto !important;
+  min-height: unset !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.BW-WebPositionActionButtons .LG-Button .html-face {
+  display: flex !important;
+  align-items: center !important;
+  padding: 8px 0 !important;
 }
 
 .BW-WebPositionActionButtons .LG-Button:hover {
@@ -404,11 +414,13 @@ body,
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
   border-radius: 7px !important;
   color: #ddeeff !important;
-  padding: 7px 10px !important;
+  padding: 4px 8px !important;
   font-size: 14px !important;
-  width: 100% !important;
   box-sizing: border-box !important;
   transition: border-color 0.2s ease, background 0.2s ease !important;
+  height: auto !important;
+  min-height: unset !important;
+  line-height: normal !important;
 }
 
 .LG-TextBox:focus,
@@ -483,17 +495,29 @@ body,
   border: 1px solid rgba(100, 180, 255, 0.5) !important;
   border-radius: 8px !important;
   color: #ffffff !important;
-  padding: 10px 28px !important;
+  padding: 0 28px !important;
   font-size: 14px !important;
   font-weight: 600 !important;
   cursor: pointer !important;
   transition: background 0.2s ease, box-shadow 0.2s ease !important;
   margin-top: 16px !important;
+  height: auto !important;
+  min-height: unset !important;
+  line-height: normal !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .LG-Button.primary:hover {
   background: rgba(80, 150, 255, 0.8) !important;
   box-shadow: 0 4px 16px rgba(80, 150, 255, 0.35) !important;
+}
+
+.LG-Button.primary .html-face {
+  display: flex !important;
+  align-items: center !important;
+  padding: 10px 0 !important;
 }
 
 /* ---------- Validation Errors ---------- */
