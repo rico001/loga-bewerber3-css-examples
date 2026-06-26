@@ -503,8 +503,8 @@ body,
 
 /* ---------- Vertikaler Abstand zwischen Formularzeilen ---------- */
 .BW-WebPositionPage .LG-Form td {
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
 }
 
 .LG-InputLabel-required {
@@ -576,9 +576,16 @@ body,
 }
 
 /* ---------- File Upload Controller ---------- */
-.LG-FileController,
-.LG-FileController-Edit,
-.LG-FileController-Edit-uploader,
+/* Äußerer Wrapper komplett neutral, kein eigener Hintergrund/Border */
+.LG-FileController {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Innere Layer transparent */
 .LG-FileController-MainPanel,
 .LG-FileController-Text,
 .LG-FileController .LG-Icon,
@@ -587,6 +594,7 @@ body,
   background-color: transparent !important;
 }
 
+/* Nur die Edit-Box trägt das Eingabefeld-Styling */
 .LG-FileController-Edit,
 .LG-FileController-Edit-uploader {
   background: rgba(255, 255, 255, 0.07) !important;
